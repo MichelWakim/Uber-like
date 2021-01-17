@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     //creating the 2 buttons
-    private Button mDriver, mCustomer;
+    private Button iDriver, iCustomer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //relating the the private buttons to the GUI buttons
-        mDriver = (Button) findViewById(R.id.driver);
-        mCustomer = (Button) findViewById(R.id.customer);
+        iDriver = (Button) findViewById(R.id.driver);
+        iCustomer = (Button) findViewById(R.id.customer);
 
         //function to open a new view by clicking the button
-        mDriver.setOnClickListener(v -> {
+        iDriver.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, DriverLoginActivity.class);
             startActivity(intent);
-            finsih();
+            finish();
         });
     }
 }
